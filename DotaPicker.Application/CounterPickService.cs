@@ -33,11 +33,6 @@ public class CounterPickService
         {
             await Task.Delay(100); 
             var matchups = await _apiClient.GetMatchupsAsync(enemy.Id);
-            
-            // ФИНАЛЬНЫЙ ФИКС:
-            // Поднимаем планку до 50 игр.
-            // Теперь мы увидим только те матчапы, которые случаются РЕГУЛЯРНО.
-            // Это отсеет 83% винрейты на 12 играх.
             foreach (var matchup in matchups.Where(m => m.GamesPlayed >= 50))
             {
                 if (!totalWinRates.ContainsKey(matchup.HeroId)) totalWinRates[matchup.HeroId] = 0;
