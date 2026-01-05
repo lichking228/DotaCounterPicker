@@ -1,0 +1,11 @@
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\bin\Debug\net8.0\DotaPicker.Domain.deps.json
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\bin\Debug\net8.0\DotaPicker.Domain.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\bin\Debug\net8.0\DotaPicker.Domain.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.AssemblyInfoInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.AssemblyInfo.cs
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.csproj.CoreCompileInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\refint\DotaPicker.Domain.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\DotaPicker.Domain.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Domain\obj\Debug\net8.0\ref\DotaPicker.Domain.dll

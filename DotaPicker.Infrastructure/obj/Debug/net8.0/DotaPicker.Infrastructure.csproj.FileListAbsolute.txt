@@ -1,0 +1,17 @@
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Infrastructure.deps.json
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Infrastructure.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Infrastructure.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Application.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Domain.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Domain.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\bin\Debug\net8.0\DotaPicker.Application.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.csproj.AssemblyReference.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.AssemblyInfoInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.AssemblyInfo.cs
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPick.973BF9CD.Up2Date
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\refint\DotaPicker.Infrastructure.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\DotaPicker.Infrastructure.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Infrastructure\obj\Debug\net8.0\ref\DotaPicker.Infrastructure.dll

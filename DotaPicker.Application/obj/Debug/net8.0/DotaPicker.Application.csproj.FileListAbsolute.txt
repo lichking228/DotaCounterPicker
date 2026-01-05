@@ -1,0 +1,15 @@
+C:\Dev\DotaCounterPicker\DotaPicker.Application\bin\Debug\net8.0\DotaPicker.Application.deps.json
+C:\Dev\DotaCounterPicker\DotaPicker.Application\bin\Debug\net8.0\DotaPicker.Application.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Application\bin\Debug\net8.0\DotaPicker.Application.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Application\bin\Debug\net8.0\DotaPicker.Domain.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Application\bin\Debug\net8.0\DotaPicker.Domain.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.csproj.AssemblyReference.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.AssemblyInfoInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.AssemblyInfo.cs
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.csproj.CoreCompileInputs.cache
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPick.07D1DEF8.Up2Date
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\refint\DotaPicker.Application.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.pdb
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\ref\DotaPicker.Application.dll
