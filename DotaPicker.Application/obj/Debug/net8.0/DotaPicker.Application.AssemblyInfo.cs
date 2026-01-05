@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotaPicker.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6ea01e09d0bf907d96d6b8dc616f4126717c1c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotaPicker.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotaPicker.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

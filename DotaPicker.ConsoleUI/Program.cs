@@ -3,15 +3,13 @@ using DotaPicker.Domain;
 using DotaPicker.Infrastructure;
 using Spectre.Console;
 
-
 IOpenDotaClient client = new OpenDotaClient();
 var service = new CounterPickService(client);
-
 
 AnsiConsole.Write(new FigletText("Dota 2 Picker").Color(Color.Red));
 
 await AnsiConsole.Status()
-    .StartAsync("Загрузка данных о героях...", async ctx =>
+    .StartAsync("Loading hero data...", async ctx =>
     {
         await service.InitializeAsync();
     });
@@ -20,7 +18,7 @@ var enemyHeroes = new List<Hero>();
 
 while (enemyHeroes.Count < 5)
 {
-    var heroName = AnsiConsole.Ask<string>($"[bold yellow]Враг #{enemyHeroes.Count + 1}[/] (или 'go'):");
+    var heroName = AnsiConsole.Ask<string>($"[bold yellow]Enemy #{enemyHeroes.Count + 1}[/] (or 'go'):");
     
     if (heroName.ToLower() == "go" && enemyHeroes.Count > 0) break;
 
@@ -28,7 +26,7 @@ while (enemyHeroes.Count < 5)
 
     if (foundHeroes.Count == 0)
     {
-        AnsiConsole.MarkupLine("[red]Герой не найден![/]");
+        AnsiConsole.MarkupLine("[red]Hero not found![/]");
         continue;
     }
 
@@ -37,7 +35,7 @@ while (enemyHeroes.Count < 5)
     {
         selectedHero = AnsiConsole.Prompt(
             new SelectionPrompt<Hero>()
-                .Title("Найдено несколько героев:")
+                .Title("Select hero:")
                 .PageSize(10)
                 .AddChoices(foundHeroes)
                 .UseConverter(h => h.Name));
@@ -45,29 +43,29 @@ while (enemyHeroes.Count < 5)
 
     if (enemyHeroes.Any(h => h.Id == selectedHero.Id))
     {
-        AnsiConsole.MarkupLine("[yellow]Уже добавлен![/]");
+        AnsiConsole.MarkupLine("[yellow]Already added![/]");
         continue;
     }
 
     enemyHeroes.Add(selectedHero);
-    AnsiConsole.MarkupLine($"Добавлен: [green]{selectedHero.Name}[/]");
+    AnsiConsole.MarkupLine($"Added: [green]{selectedHero.Name}[/]");
 }
 
 if (enemyHeroes.Count > 0)
 {
     await AnsiConsole.Status()
-        .StartAsync("Анализируем матчапы...", async ctx =>
+        .StartAsync("Analyzing matchups...", async ctx =>
         {
             var recommendations = await service.GetCounterPicksAsync(enemyHeroes);
 
             var table = new Table();
-            table.AddColumn("Герой");
-            table.AddColumn("Винрейт");
-            table.AddColumn("Причина");
+            table.AddColumn("Hero");
+            table.AddColumn("Win Rate");
+            table.AddColumn("Reason");
 
             foreach (var (hero, score, reason) in recommendations)
             {
-                var color = score > 0.55 ? "green" : "yellow";
+                var color = score > 0.52 ? "green" : "yellow";
                 table.AddRow(hero.Name, $"[{color}]{score:P1}[/]", reason);
             }
 
@@ -75,5 +73,5 @@ if (enemyHeroes.Count > 0)
         });
 }
 
-Console.WriteLine("\nГотово! Нажмите Enter для выхода.");
+Console.WriteLine("\nDone. Press Enter to exit.");
 Console.ReadLine();

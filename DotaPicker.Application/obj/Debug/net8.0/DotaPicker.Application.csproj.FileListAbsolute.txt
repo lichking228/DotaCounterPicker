@@ -13,3 +13,4 @@ C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Appl
 C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\refint\DotaPicker.Application.dll
 C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.pdb
 C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\ref\DotaPicker.Application.dll
+C:\Dev\DotaCounterPicker\DotaPicker.Application\obj\Debug\net8.0\DotaPicker.Application.sourcelink.json

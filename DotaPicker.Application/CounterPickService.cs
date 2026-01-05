@@ -26,19 +26,22 @@ public class CounterPickService
     
     public async Task<List<(Hero Hero, double Score, string Reason)>> GetCounterPicksAsync(List<Hero> enemyHeroes)
     {
-        var scores = new Dictionary<int, double>();
+        var totalWinRates = new Dictionary<int, double>();
         var matchCounts = new Dictionary<int, int>();
 
         foreach (var enemy in enemyHeroes)
         {
             await Task.Delay(100); 
-            
             var matchups = await _apiClient.GetMatchupsAsync(enemy.Id);
             
-            foreach (var matchup in matchups.Where(m => m.GamesPlayed > 10))
+            // ФИНАЛЬНЫЙ ФИКС:
+            // Поднимаем планку до 50 игр.
+            // Теперь мы увидим только те матчапы, которые случаются РЕГУЛЯРНО.
+            // Это отсеет 83% винрейты на 12 играх.
+            foreach (var matchup in matchups.Where(m => m.GamesPlayed >= 50))
             {
-                if (!scores.ContainsKey(matchup.HeroId)) scores[matchup.HeroId] = 0;
-                scores[matchup.HeroId] += matchup.WinRate;
+                if (!totalWinRates.ContainsKey(matchup.HeroId)) totalWinRates[matchup.HeroId] = 0;
+                totalWinRates[matchup.HeroId] += matchup.WinRate;
                 
                 if (!matchCounts.ContainsKey(matchup.HeroId)) matchCounts[matchup.HeroId] = 0;
                 matchCounts[matchup.HeroId]++;
@@ -46,26 +49,29 @@ public class CounterPickService
         }
 
         var result = new List<(Hero, double, string)>();
+        int totalEnemies = enemyHeroes.Count;
 
-        foreach (var (heroId, totalWinRate) in scores)
+        foreach (var (heroId, sumWinRate) in totalWinRates)
         {
             if (enemyHeroes.Any(e => e.Id == heroId)) continue;
-
+            
             var hero = _heroesCache.FirstOrDefault(h => h.Id == heroId);
             if (hero == null) continue;
 
             int enemiesCounted = matchCounts[heroId];
-            double averageWinRate = totalWinRate / enemiesCounted;
+            
+            int requiredMatches = totalEnemies <= 1 ? 1 : (int)Math.Ceiling(totalEnemies / 2.0);
+            
+            if (enemiesCounted < requiredMatches) continue;
 
-            if (enemiesCounted >= enemyHeroes.Count / 2 && averageWinRate > 0.51)
-            {
-                result.Add((hero, averageWinRate, $"WinRate {averageWinRate:P1} vs {enemiesCounted} enemies"));
-            }
+            double avgWinRate = sumWinRate / enemiesCounted;
+
+            result.Add((hero, avgWinRate, $"Avg WinRate vs {enemiesCounted}/{totalEnemies} enemies"));
         }
 
         return result
             .OrderByDescending(x => x.Item2)
-            .Take(5)
+            .Take(10)
             .ToList();
     }
 }

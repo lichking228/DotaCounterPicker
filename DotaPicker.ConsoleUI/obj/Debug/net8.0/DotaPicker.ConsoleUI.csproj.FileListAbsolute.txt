@@ -21,3 +21,4 @@ C:\Dev\DotaCounterPicker\DotaPicker.ConsoleUI\obj\Debug\net8.0\refint\DotaPicker
 C:\Dev\DotaCounterPicker\DotaPicker.ConsoleUI\obj\Debug\net8.0\DotaPicker.ConsoleUI.pdb
 C:\Dev\DotaCounterPicker\DotaPicker.ConsoleUI\obj\Debug\net8.0\DotaPicker.ConsoleUI.genruntimeconfig.cache
 C:\Dev\DotaCounterPicker\DotaPicker.ConsoleUI\obj\Debug\net8.0\ref\DotaPicker.ConsoleUI.dll
+C:\Dev\DotaCounterPicker\DotaPicker.ConsoleUI\obj\Debug\net8.0\DotaPicker.ConsoleUI.sourcelink.json
